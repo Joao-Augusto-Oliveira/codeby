@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Header from '../../components/Header';
 import { useCart } from '../../hooks/useCart';
 import { api } from '../../services/api';
 import { formatPrice } from '../../utils/format';
@@ -25,7 +26,6 @@ interface Item {
 
 export default function Home () {
    const [items, setItems] = useState<ItemFormatted[]>([])
-
    const { addProduct, cart } = useCart();
 
   const cartItemsAmount = cart.reduce((sumAmount, product) => {
@@ -37,7 +37,7 @@ export default function Home () {
     async function loadItems() {
         const response = await api.get('/items');
         const ItemFormatted = response.data.map(function (items: Item) {
-          return { ...items, sellingPrice: formatPrice(items.sellingPrice), price: formatPrice(items.price)}
+          return { ...items, sellingPrice: formatPrice(items.sellingPrice/100), price: formatPrice(items.price/100)}
         })
         setItems(ItemFormatted)
       }  
@@ -47,10 +47,13 @@ export default function Home () {
     function handleAddProduct(id: number) {
         addProduct(id);
       }
+    
  
     return (
-        <>
-            <S.ItemsList>
+       <> 
+       <Header /> 
+     
+           <S.ItemsList>          
                 {items.map(item => (
                     <S.Product key={item.id}>
                         <img src={item.imageUrl} alt={item.name} />

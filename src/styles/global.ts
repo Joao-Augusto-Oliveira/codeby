@@ -2,6 +2,16 @@ import { createGlobalStyle } from 'styled-components';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default createGlobalStyle`
+
+  :root {
+    --blue: #3B74F2;
+    --white: #ffffff;
+    --black: #333;
+    --lightgray: #D1D8E5;
+    --darkgray: #A5A5A5;
+
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -10,7 +20,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #D1D8E5;
+    background: var(--lightgray);
     -webkit-font-smoothing: antialiased;
   }
 
