@@ -83,28 +83,20 @@ export default function Cart() {
               <div className="icons">
                 <button
                   type="button"
-                  data-testid="decrement-product"
                   disabled={item.amount <= 1}
                   onClick={() => handleProductDecrement(item)}
                 >
                   <MdRemoveCircleOutline size={20} />
                 </button>
-                <input
-                  type="text"
-                  data-testid="product-amount"
-                  readOnly
-                  value={item.amount}
-                />
+                <input type="text" readOnly value={item.amount} />
                 <button
                   type="button"
-                  data-testid="increment-product"
                   onClick={() => handleProductIncrement(item)}
                 >
                   <MdAddCircleOutline size={20} />
                 </button>
                 <button
                   type="button"
-                  data-testid="remove-product"
                   onClick={() => handleRemoveProduct(item.id)}
                 >
                   <MdDelete size={20} />

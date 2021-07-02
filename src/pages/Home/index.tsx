@@ -64,13 +64,8 @@ export default function Home() {
               <span>{item.price}</span>
               <span>{item.sellingPrice}</span>
             </S.Price>
-            <S.CartButton
-              onClick={() => handleAddProduct(item.id)}
-              data-testid="add-product-button"
-            >
-              <div data-testid="cart-product-quantity">
-                {cartItemsAmount[item.id] || 0}
-              </div>
+            <S.CartButton onClick={() => handleAddProduct(item.id)}>
+              <div>{cartItemsAmount[item.id] || 0}</div>
               Adicionar ao carrinho
             </S.CartButton>
           </S.Product>
