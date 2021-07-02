@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { darken } from 'polished';
+import { darken, lighten } from 'polished';
 
 export const ItemsList = styled.div`
 display: flex;
@@ -28,7 +28,46 @@ export const Product = styled.div`
     background: var(--white);
     border-radius: 4px;
     padding: 20px;
-    align-items: center;
+    
+
+  div .icons {
+    display: flex;
+
+    input {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      color: #666;
+      padding: 6px;
+      width: 50px;
+      height: 50px;
+    
+    }
+  }
+
+  button {
+    background: none;
+    border: 0;
+    padding: 6px;
+
+    svg {
+      color: #7159c1;
+      transition: color 0.2s;
+    }
+
+    &:hover {
+      svg {
+        color: ${darken(0.06, '#7159c1')};
+      }
+    }
+
+    &:disabled {
+      svg {
+        color: ${lighten(0.25, '#7159c1')};
+        cursor: not-allowed;
+      }
+    }
+  }
+
 `;
 
 export const Price = styled.div`
@@ -102,9 +141,8 @@ export const Total = styled.div`
 display: flex;
 align-items: center;
 justify-content: space-between;
-height: 10rem;
-border-bottom: 1px solid var(--darkgray);
-border-top: 1px solid var(--darkgray);
+height: 9rem;
+
 padding: 20px;
 
 h2 {
@@ -116,5 +154,29 @@ font-size: 2.5rem;
 h2:nth-child(2) {
       text-align: right;
     }
+`;
+
+export const Frete = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 3rem;
+
+h2 {
+font-size: 2.5rem;
+color: var(--darkgreen);
+border-radius: 40px;
+background: var(--lightgreen);
+height: 5rem;
+display: flex;
+align-items: center;
+padding: 30px;
+font-weight: 400;
+}
+`;
+
+export const ContainerTotal = styled.div`
+border-bottom: 1px solid var(--darkgray);
+border-top: 1px solid var(--darkgray);
 `;
 

@@ -39,6 +39,7 @@ display: flex;
 flex-direction: column;
 flex-wrap: wrap;
 width: 100%;
+font-weight: 700;
 
 > strong {
       font-size: 21px;
@@ -73,6 +74,7 @@ color: var(--white);
 overflow: hidden;
 margin-top: auto;
 transition: background 0.2s;
+font-weight: 700;
 
 &:hover {
   background: ${darken(0.06, '#3B74F2')} ;
