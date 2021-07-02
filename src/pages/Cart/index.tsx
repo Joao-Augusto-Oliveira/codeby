@@ -3,6 +3,7 @@ import {
     MdAddCircleOutline,
     MdRemoveCircleOutline,
   } from 'react-icons/md';
+import Return from '../../components/Return';
 import { useCart } from '../../hooks/useCart';
 import { formatPrice } from '../../utils/format';
 import * as S from './styles';
@@ -64,6 +65,7 @@ import * as S from './styles';
            
         return (
         <>
+        <Return />
             <S.ItemsList>
                 <S.Title>
                     <h2>Meu carrinho</h2>         

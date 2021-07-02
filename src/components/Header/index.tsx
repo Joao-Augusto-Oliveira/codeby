@@ -15,7 +15,6 @@ const Header = (): JSX.Element => {
             {cartSize === 1 ? `${cartSize} item` : `${cartSize} itens`}
           </span>
         </div>
-        {/* <MdShoppingBasket size={36} color="#FFF" /> */}
       </S.Cart>
     </S.Container>
   );

@@ -27,9 +27,6 @@ export const Cart = styled(Link)`
       }
     }
 
-    span {
-    font-size: 16px;
-    color: var(--darkgray);  
-    }
+
   }
 `;

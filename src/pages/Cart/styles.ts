@@ -50,19 +50,19 @@ export const Product = styled.div`
     padding: 6px;
 
     svg {
-      color: #7159c1;
+      color: var(--blue);
       transition: color 0.2s;
     }
 
     &:hover {
       svg {
-        color: ${darken(0.06, '#7159c1')};
+        color: ${darken(0.06, '#3B74F2')};
       }
     }
 
     &:disabled {
       svg {
-        color: ${lighten(0.25, '#7159c1')};
+        color: ${lighten(0.25, '#3B74F2')};
         cursor: not-allowed;
       }
     }
