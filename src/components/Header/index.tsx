@@ -7,7 +7,6 @@ const Header = (): JSX.Element => {
 
   return (
     <S.Container>
-      
       <S.Cart to="/cart">
         <div>
           <strong>Ir para o meu carrinho</strong>

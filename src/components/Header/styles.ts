@@ -5,7 +5,7 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 50px 0;  
+  margin: 50px 0;
 `;
 
 export const Cart = styled(Link)`
@@ -23,13 +23,12 @@ export const Cart = styled(Link)`
       color: var(--black);
 
       &:hover {
-        opacity: 0.7
+        opacity: 0.7;
       }
     }
-
     span {
-    font-size: 16px;
-    color: var(--darkgray);  
+      font-size: 16px;
+      color: var(--darkgray);
     }
   }
 `;

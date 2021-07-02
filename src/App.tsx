@@ -13,7 +13,6 @@ const App = (): JSX.Element => {
         <ToastContainer autoClose={3000} />
       </CartProvider>
     </BrowserRouter>
-    
   );
 };
 
